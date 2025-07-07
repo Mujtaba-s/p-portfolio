@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lobster&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+@import "tailwindcss";
+
+@theme {
+    --font-lob:"Lobster", sans-serif;
+    --font-lob2:"Caveat", cursive;
+    --color-nav:#bfd6c4e6;
+    --color-odd:#f8f8f8;
+    --color-even:#ffffff;
+    --color-pro:#f9f9f9;
+}
+
+.navbar {
+  @apply flex justify-between items-center px-4 h-20 fixed w-full  z-1000 bg-nav backdrop-blur-[5px]  text-lg  
+}
+
+.right{
+  @apply mx-2.5 text-sm
+} 
+
+.right a{
+ @apply hover:text-blue-400  md:mr-5 
+}
+
+
+section{
+  @apply py-32 px-8  h-[80%] flex  flex-col items-center text-center gap-2 odd:bg-odd even:bg-even
+}
+
+ section h2 {
+  @apply  mb-4 tracking-wide 
+}
+
+ section hr {
+  @apply w-25 h-1 bg-green-300  rounded-2xl border-none
+ }
+
+ #about-section{
+  @apply min-h-[100vh] flex-col justify-center py-32 px-8 flex items-center text-center gap-2 
+ }
+
+ #about-section h2{
+  @apply mb-4 text-4xl 
+ }
+
+ #about-section img{
+   @apply w-[100%] h-[100%] rounded-full object-cover transition duration-500 ease-in-out scale-95  hover:scale-150
+ }
+ 
+ #about-section .social-links{
+  @apply text-4xl 
+ }
+
+ #about-section .social-links a{
+  @apply p-0 mx-3 
+ }
+
+ #about-section .social-links a i{
+  @apply   transition duration-400 hover:scale-150
+ }
+
+ #about-section .social-links i{
+  @apply  text-green-300
+ }
+
+ #projects-section {
+   @apply w-full m-auto min-h-[100vh] py-24 px-4 flex  items-center text-center gap-8 md:min-h-[50vh]
+}
+.proj-scroll{
+  @apply flex gap-6  w-[95%]  max-w-500 overflow-x-auto  mx-8
+}
+
+.proj{
+  @apply flex  w-65  text-center rounded-xl p-4 bg-pro  shadow-2xl transition duration-500 ease-in-out scale-95  hover:scale-100
+}
+
+.proj h4{
+  @apply font-lob2
+}
+
+.img2{
+  @apply w-[100%] h-48 object-cover rounded-xl mb-3
+}
+
+#skills-section  {
+  @apply min-h-[30vh] flex flex-col items-center text-center gap-2
+}
+
+.skills-container{
+@apply flex flex-wrap justify-center gap-8 mt-6
+}
+
+
+.skills-container i{
+  @apply  text-5xl text-green-300
+}
+
+.content-inputs{
+  @apply w-70 border-0 outline-0 pl-6 rounded-[50px] bg-blue-50 focus:border-2 border-blue-100 md:w-98 h-[50px]
+}
+
+.content-left textarea {
+  @apply h-36 pt-3.5 rounded-3xl
+}
+
+.content-left button {
+  @apply w-[200px] flex items-center ml-22 gap-2.5 border-0 rounded-[50px] bg-amber-100
+}
